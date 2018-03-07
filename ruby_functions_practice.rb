@@ -36,8 +36,8 @@ def number_to_full_month_name(number)
 end
 
 def number_to_short_month_name(number)
-  months = [nil, "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-  return months[number]
+  full_month = number_to_full_month_name(number)
+  return full_month.slice(0,3)
 end
 
 def volume_of_cube(side)
